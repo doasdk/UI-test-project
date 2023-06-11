@@ -42,6 +42,16 @@ public class pageTest {
     public void goToStoreAndChooseCategory() throws InterruptedException {
         new AllegroStore().searchForAStore();
         new AllegroStore().choosingACategory();
+        new AllegroStore().choosingAmongMultipleProductsOnOnePage();
+        new GeneralMethods().addToCart();
+
+    }
+
+    @Test
+    public void buyFromACartAndChangeLanguage() throws InterruptedException {
+        new AllegroBuyingFromACart().deleteSomeProductsFromTheCart();
+        new AllegroBuyingFromACart().changeTheLanguage();
+        new GeneralMethods().buyProductsFromTheCart();
 
     }
 

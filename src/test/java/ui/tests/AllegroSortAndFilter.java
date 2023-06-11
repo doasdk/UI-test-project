@@ -27,8 +27,8 @@ public class AllegroSortAndFilter {
         //setting a filter "nowe"
         $(byXpath("//*[@id=\"filters\"]/div[2]/div/div/div/div/div/fieldset[4]/div/ul/li[1]/label/span")).click();
 
-        $(byXpath("//*[@id=\"price_from\"]")).setValue("20");
-        Thread.sleep(900);
+//        $(byXpath("//*[@id=\"price_from\"]")).setValue("20");
+//        Thread.sleep(900);
         $(byXpath("//input[@placeholder='do']")).setValue("50").pressEnter();
         Thread.sleep(5000);
 

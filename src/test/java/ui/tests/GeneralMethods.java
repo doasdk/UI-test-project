@@ -23,9 +23,9 @@ public class GeneralMethods {
     public void addToCart() throws InterruptedException {
 //        $(byXpath("//*[@id='add-to-cart-button']")).click();
 //        Thread.sleep(100);
-        //+1
-        $(byXpath("//*[@id=\"transaction-buttons-section\"]/div[1]/div[2]/div[1]/button[2]/img")).click();
-        Thread.sleep(100);
+//        //+1
+//        $(byXpath("//*[@id=\"transaction-buttons-section\"]/div[1]/div[2]/div[1]/button[2]/img")).click();
+//        Thread.sleep(100);
         //add to cart
         $(byXpath("//*[@id=\"add-to-cart-button\"]")).click();
         Thread.sleep(100);
@@ -39,5 +39,10 @@ public class GeneralMethods {
         $(byXpath("/html/body/div[2]/div[6]/div/div/div[7]/div/div/div[3]/div/div/div[2]/div/div[5]/div/div/div/div[2]/a[2]")).click();
         Thread.sleep(10000);
     }
+
+    public void buyProductsFromTheCart(){
+        $(byXpath("/html/body/div[2]/div[4]/div/div/div[1]/div/div/div/div/div[1]/div[1]/app-root/cart/div/div[2]/aside/div/div/cart-footer/div/sticky-buttons/div/div/div/submit-button/button/span[2]")).click();
+    }
+
 
 }

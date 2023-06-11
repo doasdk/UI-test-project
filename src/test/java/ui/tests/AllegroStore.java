@@ -1,7 +1,7 @@
 package ui.tests;
-import static com.codeborne.selenide.Selectors.byClassName;
 import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.$;
+
 public class AllegroStore {
 
     public void searchForAStore() throws InterruptedException {
@@ -27,19 +27,23 @@ public class AllegroStore {
         $(byXpath("//*[@id=\"search-results\"]/div[5]/div/div/div/div/div/section[2]/article[1]/div/div/div[2]/div[1]/h2/a")).click();
         Thread.sleep(1500);
         //amount of product to buy
-        $(byXpath("//*[@id=\"transaction-buttons-section\"]/div[1]/div[2]/div[1]/input")).setValue("6");
+        $(byXpath("//*[@id=\"transaction-buttons-section\"]/div[1]/div[2]/div[1]/button[2]/img")).doubleClick();
         Thread.sleep(3000);
 
     }
 
-    public void choosingAmongMultipleProductsOnOnePage(){
+    public void choosingAmongMultipleProductsOnOnePage() throws InterruptedException {
+        //go back
+        $(byXpath("/html/body/div[2]/div[6]/div/div/div[1]/div/div/div/nav/ol/li[6]/a")).click();
         //go to the product
-        $(byXpath("/html/body/div[2]/div[6]/div/div/div[1]/div/div/div/nav/ol/li[6]/a/span")).click();
-
+        $(byXpath("//*[@id=\"search-results\"]/div[5]/div/div/div[1]/div/div/section[2]/article[14]/div/div/div[1]/div/div[1]/a/img")).click();
+        Thread.sleep(1200);
         //click on another options
         $(byXpath("/html/body/div[2]/div[6]/div/div/div[7]/div/div/div[3]/div/div/div[2]/div/div[1]/div/div/div[2]/div/div/div/div/div/div[2]/div[5]/div/div/div/div/div/div/div[10]/div/a/span")).click();
-
-
+        Thread.sleep(5000);
+        //clicking on another product
+        $(byXpath("/html/body/div[2]/div[5]/div[2]/div/div[2]/div/div/div[22]/div/a/span/div")).click();
+        Thread.sleep(2000);
 
     }
 
