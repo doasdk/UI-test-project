@@ -1,9 +1,9 @@
 package ui.tests;
 
 import com.codeborne.selenide.Configuration;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class pageTest {
 
     @BeforeAll
@@ -13,13 +13,16 @@ public class pageTest {
 //        Configuration.headless = true;
     }
 
+
     @Test
+    @Order(1)
     public void openAndAcceptCookies() throws InterruptedException {
         new GeneralMethods().open().acceptCookies();
-        Thread.sleep(10000);
+        Thread.sleep(5000);
     }
 
     @Test
+    @Order(2)
     public void searchForSpecificGooseProductAddToCart() throws InterruptedException {
 //        new GeneralMethods().open().acceptCookies();
 
@@ -29,6 +32,7 @@ public class pageTest {
     }
 
     @Test
+    @Order(3)
     public void sortAndFilterSearchingForTheProduct() throws InterruptedException {
         new AllegroSortAndFilter().searchingForTheProduct();
         new AllegroSortAndFilter().changeSortingSettings();
@@ -39,6 +43,7 @@ public class pageTest {
 
 
     @Test
+    @Order(4)
     public void goToStoreAndChooseCategory() throws InterruptedException {
         new AllegroStore().searchForAStore();
         new AllegroStore().choosingACategory();
@@ -48,9 +53,10 @@ public class pageTest {
     }
 
     @Test
-    public void buyFromACartAndChangeLanguage() throws InterruptedException {
-        new AllegroBuyingFromACart().deleteSomeProductsFromTheCart();
-        new AllegroBuyingFromACart().changeTheLanguage();
+    @Order(5)
+    public void changeCartAndLanguage() throws InterruptedException {
+        new AllegroChangeACartAndLanguage().deleteSomeProductsFromTheCart();
+        new AllegroChangeACartAndLanguage().changeTheLanguage();
         new GeneralMethods().buyProductsFromTheCart();
 
     }

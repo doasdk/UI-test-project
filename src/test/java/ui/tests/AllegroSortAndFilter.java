@@ -23,19 +23,21 @@ public class AllegroSortAndFilter {
         $(byXpath("/html/body/div[2]/div[6]/div/div[2]/div/div/div/div/div/div[3]/div[1]/div[2]/div[3]/div/div/div[1]/select/option[2]")).click();
         Thread.sleep(800);
     }
+
     public void changeFilterSettings() throws InterruptedException {
         //setting a filter "nowe"
         $(byXpath("//*[@id=\"filters\"]/div[2]/div/div/div/div/div/fieldset[4]/div/ul/li[1]/label/span")).click();
-
-//        $(byXpath("//*[@id=\"price_from\"]")).setValue("20");
-//        Thread.sleep(900);
+        //to 50 pln
         $(byXpath("//input[@placeholder='do']")).setValue("50").pressEnter();
-        Thread.sleep(5000);
+        Thread.sleep(1300);
+        //from 20 pln
+        $(byXpath("//*[@id=\"price_from\"]")).setValue("20").pressEnter();
+        Thread.sleep(900);
 
     }
 
     public void clickOnProduct() throws InterruptedException {
-        $(byXpath("//*[@id=\"search-results\"]/div[5]/div/div/div[1]/div/div/section[2]/article[5]/div/div")).click();
+        $(byXpath("//*[@id=\"search-results\"]/div[5]/div/div/div[1]/div/div/section[2]/article[3]/div/div/div[2]/div[1]/h2/a")).click();
         Thread.sleep(5000);
     }
 
