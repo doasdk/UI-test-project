@@ -37,7 +37,7 @@ public class AllegroSortAndFilter {
     }
 
     public void clickOnProduct() throws InterruptedException {
-        $(byXpath("//*[@id=\"search-results\"]/div[5]/div/div/div[1]/div/div/section[2]/article[3]/div/div/div[2]/div[1]/h2/a")).click();
+        $(byXpath("/html/body/div[2]/div[6]/div/div[2]/div/div/div/div/div/div[3]/div[1]/div[5]/div/div/div[1]/div/div/section[2]/article[1]/div/div/div[2]/div[1]/h2/a")).click();
         Thread.sleep(5000);
     }
 

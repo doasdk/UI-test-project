@@ -1,4 +1,6 @@
 package ui.tests;
+import com.codeborne.selenide.Condition;
+
 import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.$;
 
@@ -24,22 +26,22 @@ public class AllegroStore {
         $(byXpath("/html/body/div[2]/div[4]/div/div/div[2]/div/div/div/div/div[1]/div/div/div/div/div/div/div/div/div/div/div[1]/div[2]/ul/li[1]/a")).click();
         Thread.sleep(1000);
         //go to a specific product
-        $(byXpath("//*[@id=\"search-results\"]/div[5]/div/div/div/div/div/section[2]/article[1]/div/div/div[2]/div[1]/h2/a")).click();
+        $(byXpath("/html/body/div[2]/div[4]/div/div/div/div/div/div[3]/div[1]/div[5]/div/div/div/div/div/section[2]/article[4]/div/div/div[2]/div[1]/h2/a")).click();
         Thread.sleep(1500);
         //amount of product to buy
-        $(byXpath("//*[@id=\"transaction-buttons-section\"]/div[1]/div[2]/div[1]/button[2]/img")).doubleClick();
+        $(byXpath("//*[@id=\"transaction-buttons-section\"]/div[1]/div[2]/div[1]/button[2]/img")).shouldBe(Condition.visible).click();
         Thread.sleep(3000);
 
     }
 
     public void choosingAmongMultipleProductsOnOnePage() throws InterruptedException {
         //go back
-        $(byXpath("/html/body/div[2]/div[6]/div/div/div[1]/div/div/div/nav/ol/li[6]/a")).click();
+        $(byXpath("/html/body/div[2]/div[6]/div/div/div[1]/div/div/div/nav/ol/li[6]/a/span")).click();
         //go to the product
-        $(byXpath("//*[@id=\"search-results\"]/div[5]/div/div/div[1]/div/div/section[2]/article[14]/div/div/div[1]/div/div[1]/a/img")).click();
+        $(byXpath("/html/body/div[2]/div[6]/div/div[2]/div/div/div/div/div/div[3]/div[1]/div[5]/div/div/div[1]/div/div/section[2]/article[13]/div/div/div[2]/div[1]/h2/a")).click();
         Thread.sleep(1200);
         //click on another options
-        $(byXpath("/html/body/div[2]/div[6]/div/div/div[7]/div/div/div[3]/div/div/div[2]/div/div[1]/div/div/div[2]/div/div/div/div/div/div[2]/div[5]/div/div/div/div/div/div/div[10]/div/a/span")).click();
+        $(byXpath("/html/body/div[2]/div[6]/div/div/div[7]/div/div/div[3]/div/div/div[2]/div/div[1]/div/div/div[2]/div/div/div/div/div/div[2]/div[5]/div/div/div/div/div/div/div[10]/div/a/span")).shouldBe(Condition.visible).click();
         Thread.sleep(5000);
         //clicking on another product
         $(byXpath("/html/body/div[2]/div[5]/div[2]/div/div[2]/div/div/div[22]/div/a/span/div")).click();

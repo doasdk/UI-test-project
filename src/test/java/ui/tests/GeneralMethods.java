@@ -41,7 +41,7 @@ public class GeneralMethods {
     }
 
     public void buyProductsFromTheCart(){
-        $(byXpath("/html/body/div[2]/div[4]/div/div/div[1]/div/div/div/div/div[1]/div[1]/app-root/cart/div/div[2]/aside/div/div/cart-footer/div/sticky-buttons/div/div/div/submit-button/button/span[2]")).click();
+        $(byXpath("/html/body/div[2]/div[4]/div/div/div[1]/div/div/div/app-root/cart/div/div[2]/aside/div/div/cart-footer/div/sticky-buttons/div/div/div/submit-button/button")).click();
     }
 
 
