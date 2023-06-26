@@ -34,14 +34,10 @@ public class GeneralMethods {
         Thread.sleep(4000);
     }
 
-    public void goToTheStore() throws InterruptedException {
-        //every product from a store
-        $(byXpath("/html/body/div[2]/div[6]/div/div/div[7]/div/div/div[3]/div/div/div[2]/div/div[5]/div/div/div/div[2]/a[2]")).click();
-        Thread.sleep(10000);
-    }
 
-    public void buyProductsFromTheCart(){
+    public void buyProductsFromTheCart() throws InterruptedException {
         $(byXpath("/html/body/div[2]/div[4]/div/div/div[1]/div/div/div/app-root/cart/div/div[2]/aside/div/div/cart-footer/div/sticky-buttons/div/div/div/submit-button/button")).click();
+        Thread.sleep(2000);
     }
 
 

@@ -35,8 +35,8 @@ public class pageTest {
     @Order(3)
     public void sortAndFilterSearchingForTheProduct() throws InterruptedException {
         new AllegroSortAndFilter().searchingForTheProduct();
-        new AllegroSortAndFilter().changeSortingSettings();
         new AllegroSortAndFilter().changeFilterSettings();
+        new AllegroSortAndFilter().changeSortingSettings();
         new AllegroSortAndFilter().clickOnProduct();
         new GeneralMethods().addToCart();
     }
