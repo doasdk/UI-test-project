@@ -10,7 +10,7 @@ public class GeneralMethods {
 
     public GeneralMethods open() throws InterruptedException {
         Selenide.open("/");
-        Thread.sleep(3000);
+        Thread.sleep(1000);
         return this;
     }
 

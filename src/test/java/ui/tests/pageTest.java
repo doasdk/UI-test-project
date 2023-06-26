@@ -18,7 +18,7 @@ public class pageTest {
     @Order(1)
     public void openAndAcceptCookies() throws InterruptedException {
         new GeneralMethods().open().acceptCookies();
-        Thread.sleep(5000);
+        Thread.sleep(3000);
     }
 
     @Test

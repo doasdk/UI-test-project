@@ -25,7 +25,7 @@ public class AllegroStore {
         //choosing "Akcesoria"
         $(byXpath("/html/body/div[2]/div[4]/div/div/div[2]/div/div/div/div/div[1]/div/div/div/div/div/div/div/div/div/div/div[1]/div[2]/ul/li[1]/a")).click();
         Thread.sleep(1000);
-        //go to a specific product
+        //go to a dices1
         $(byXpath("/html/body/div[2]/div[4]/div/div/div/div/div/div[3]/div[1]/div[5]/div/div/div/div/div/section[2]/article[16]/div/div/div[2]/div[1]/h2/a")).click();
         Thread.sleep(1500);
         //amount of product to buy

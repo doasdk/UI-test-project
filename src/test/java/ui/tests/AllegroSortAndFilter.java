@@ -24,12 +24,11 @@ public class AllegroSortAndFilter {
     public void changeFilterSettings() throws InterruptedException {
         //setting a filter "nowe"
         $(byXpath("/html/body/div[2]/div[6]/div/div[2]/div/div/div/div/div/div[3]/div[2]/div[2]/div/div/div/div/div/div[2]/div[2]/div/label")).click();
-
         //to 50 pln
-        $(byXpath("//input[@placeholder='do']")).setValue("50").pressEnter();
+        $(byXpath("//input[@placeholder='do']")).setValue("50");
         Thread.sleep(1300);
         //from 20 pln
-        $(byXpath("//*[@id=\"price_from\"]")).setValue("20").pressEnter();
+        $(byXpath("//*[@id=\"price_from\"]")).setValue("20");
         Thread.sleep(900);
 
 
